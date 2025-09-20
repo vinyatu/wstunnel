@@ -57,7 +57,7 @@ ENV SERVER_LISTEN="[::]"
 ENV SERVER_PORT="8080"
 EXPOSE 8080
 
-USER app
+# USER app
 
 ENTRYPOINT ["/usr/bin/dumb-init", "-v", "--"]
 CMD ["/bin/sh", "-c", "exec /home/app/wstunnel server ${SERVER_PROTOCOL}://${SERVER_LISTEN}:${SERVER_PORT}"]
